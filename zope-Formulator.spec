@@ -1,26 +1,24 @@
-%define product         Formulator
-%define version         1.11.1
-%define release         5
+%define Product Formulator
+%define product formulator
+%define name    zope-%{Product}
+%define version 1.11.3
+%define release %mkrel 1
 
 %define zope_minver     2.6
-
 %define zope_home       %{_prefix}/lib/zope
 %define software_home   %{zope_home}/lib/python
 
-Summary:        An extensible framework that eases the creation and validation of web forms
-Name:           zope-%{product}
-Version:        %{version}
-Release:        %mkrel %{release}
-License:        GPL
-Group:          System/Servers
-Source:         http://www.infrae.com/download/Formulator/%{version}/Formulator-%{version}.tar.bz2
-URL:            http://www.infrae.com/download/Formulator
-BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}-root
-BuildArch:      noarch
-Requires:       zope >= %{zope_minver}
-
-Provides:       Formulator == %version
-Obsoletes:      Formulator
+Name:		%{name}
+Version:	%{version}
+Release:	%{release}
+Summary:    An extensible framework that eases the creation and validation of web forms
+License:    GPL
+Group:      System/Servers
+URL:        http://www.infrae.com/download/Formulator
+Source:     http://www.infrae.com/download/Formulator/%{version}/%{Product}-%{version}.tgz
+Requires:   zope >= %{zope_minver}
+BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 Formulator is an extensible framework that eases the creation and validation of
@@ -53,8 +51,5 @@ if [ -f "%{_prefix}/bin/zopectl" ] && [ "`%{_prefix}/bin/zopectl status`" != "da
 fi
 
 %files
-%defattr(0644, root, root, 0755)
+%defattr(-,root,root)
 %{software_home}/Products/*
-
-
-
