@@ -18,6 +18,7 @@ URL:        http://www.infrae.com/download/Formulator
 Source:     http://www.infrae.com/download/Formulator/%{version}/%{Product}-%{version}.tgz
 Requires:   zope >= %{zope_minver}
 BuildArch:  noarch
+BuildRoot:  %{_tmppath}/%{name}-%{version}
 
 %description
 Formulator is an extensible framework that eases the creation and validation of
