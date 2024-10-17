@@ -14,7 +14,7 @@ Release:	%{release}
 Summary:    An extensible framework that eases the creation and validation of web forms
 License:    GPL
 Group:      System/Servers
-URL:        http://www.infrae.com/download/Formulator
+URL:        https://www.infrae.com/download/Formulator
 Source:     http://www.infrae.com/download/Formulator/%{version}/%{Product}-%{version}.tgz
 Requires:   zope >= %{zope_minver}
 BuildArch:  noarch
